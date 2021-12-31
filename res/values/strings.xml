@@ -428,4 +428,8 @@
     <string name="island_notification_now_playing_title">Now playing</string>
     <string name="island_notification_now_playing_summary">Display currently playing song in Dynamic Island style</string>
     <string name="island_notification_footer_text">The Island notification feature, inspired by iOS\'s Dynamic Island, transforms Android\'s heads-up notifications into quick-access and compact notification utility.\n\nIsland Quick Access Controls includes the following features:\n1. Tap island notification to quick answer phone calls.\n2. Long press island notification to reject phone calls.\n3. Long press island notification to expand the island notification preview.</string>
+
+    <!-- Idle Manager -->
+    <string name="idle_manager_title">Kill background processes</string>
+    <string name="idle_manager_summary">Stop all non-essential background processes when the device is idle</string>
 </resources>
