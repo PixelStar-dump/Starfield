@@ -55,7 +55,13 @@
         android:title="@string/visualizer_center_mirrored_title"
         android:summary="@string/visualizer_center_mirrored_summary"
         android:defaultValue="false" />
-        
+
+    <com.pixelstar.support.preferences.SecureSettingSwitchPreference
+        android:key="pulse_vertical_mirror"
+        android:title="@string/pulse_vertical_mirror_title"
+        android:summary="@string/pulse_vertical_mirror_summary"
+        android:defaultValue="false" />
+
     <com.pixelstar.support.preferences.SecureSettingSwitchPreference
         android:key="pulse_smoothing_enabled"
         android:title="@string/pulse_smoothing_enabled_title"
