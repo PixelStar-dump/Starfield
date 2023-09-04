@@ -416,4 +416,8 @@
     <!-- Ambient Ticker -->
     <string name="pulse_on_new_tracks_title">Music ticker</string>
     <string name="pulse_on_new_tracks_summary">Show music ticker on Ambient Display during track change</string>
+
+    <!-- Media player settings -->
+    <string name="media_controls_always_show_time_title">Media show time</string>
+    <string name="media_controls_always_show_time_summary">Always show passed and total time on media player</string>
 </resources>
