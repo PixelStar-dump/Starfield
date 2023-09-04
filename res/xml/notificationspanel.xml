@@ -19,11 +19,17 @@
             android:summary="@string/notification_sound_vib_screen_on_summary"
             android:defaultValue="true" />
 
-        <com.pixelstar.support.preferences.SecureSettingSwitchPreference
-                android:key="qs_show_data_usage"
-                android:title="@string/qs_show_data_usage_title"
-                android:summary="@string/qs_show_data_usage_summary"
-                android:defaultValue="true" />
+    <com.pixelstar.support.preferences.SecureSettingSwitchPreference
+            android:key="qs_show_data_usage"
+            android:title="@string/qs_show_data_usage_title"
+            android:summary="@string/qs_show_data_usage_summary"
+            android:defaultValue="true" />
+	<com.pixelstar.support.preferences.SecureSettingSwitchPreference
+			android:key="media_controls_always_show_time"
+			android:title="@string/media_controls_always_show_time_title"
+			android:summary="@string/media_controls_always_show_time_summary"
+			android:defaultValue="false" />
+
     </PreferenceCategory>
    
     <PreferenceCategory
