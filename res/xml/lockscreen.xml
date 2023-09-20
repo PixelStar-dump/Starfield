@@ -51,8 +51,16 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/pulse">
+        android:title="@string/edge">
 
+        <Preference
+            android:key="ambient_edge_light"
+            android:title="@string/ambient_edge_light_title"
+            android:summary="@string/ambient_edge_light_summary"
+            android:fragment="com.star.field.fragments.AmbientEdgeLightSettings"
+            settings:controller="com.star.field.fragments.AmbientEdgeLightPreferenceController"
+            settings:requiresConfig="@bool/config_show_ambient_edge_light" />
+            
         <Preference
             android:key="pulse_settings"
             android:fragment="com.star.field.fragments.fragments.PulseSettings"
