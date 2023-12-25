@@ -59,6 +59,12 @@
             android:summary="@string/edge_light_summary"
             android:fragment="com.star.field.fragments.EdgeLightSettings" />
 
+        <com.pixelstar.support.preferences.SecureSettingSwitchPreference
+               android:key="pulse_on_new_tracks"
+               android:title="@string/pulse_on_new_tracks_title"
+               android:summary="@string/pulse_on_new_tracks_summary"
+               android:defaultValue="false" />
+
         <Preference
             android:key="pulse_settings"
             android:fragment="com.star.field.fragments.PulseSettings"
