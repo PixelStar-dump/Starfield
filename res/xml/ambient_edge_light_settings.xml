@@ -17,8 +17,13 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:key="ambient_edge_lights"
     android:title="@string/ambient_edge_light_action_title">
+
+    <com.android.settingslib.widget.IllustrationPreference
+        android:key="edge_lights"
+        app:lottie_rawRes="@raw/edge_lights" />
 
         <com.pixelstar.support.preferences.SecureSettingMainSwitchPreference
             android:key="pulse_ambient_light"
