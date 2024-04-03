@@ -20,6 +20,7 @@ import android.content.ContentResolver;
 import android.os.Bundle;
 
 import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 
 import com.android.internal.logging.nano.MetricsProto;
@@ -31,6 +32,7 @@ public class NotificationsPanel extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "NotificationsPanel";
+    private static final String KEY_QS_SHOW_AUTO_BRIGHTNESS = "qs_show_auto_brightness";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,16 @@ public class NotificationsPanel extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.notificationspanel);
 
         ContentResolver resolver = getActivity().getContentResolver();
+        PreferenceScreen preferenceScreen = getPreferenceScreen();
+        Preference qsShowAutoBrightnessPreference = preferenceScreen.findPreference(KEY_QS_SHOW_AUTO_BRIGHTNESS);
+
+        if (qsShowAutoBrightnessPreference != null) {
+            boolean automaticBrightnessAvailable = getContext().getResources().getBoolean(
+                    com.android.internal.R.bool.config_automatic_brightness_available);
+            if (!automaticBrightnessAvailable) {
+                qsShowAutoBrightnessPreference.setVisible(false);
+            }
+        }
     }
 
     @Override
