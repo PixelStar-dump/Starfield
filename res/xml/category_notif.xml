@@ -28,4 +28,14 @@
 
     </PreferenceCategory>
     
+    <PreferenceCategory
+        android:title="@string/ls_category">
+
+          <com.android.settings.custom.preference.SystemSettingSwitchPreference
+               android:key="lockscreen_battery_info"
+               android:title="@string/lockscreen_battery_info_title"
+               android:summary="@string/lockscreen_battery_info_summary"
+               android:defaultValue="true" />
+     
+    </PreferenceCategory>
 </PreferenceScreen>
