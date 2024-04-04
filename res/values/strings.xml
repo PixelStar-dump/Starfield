@@ -191,4 +191,8 @@
      <string name="network_traffic_autohide_title">Hide network traffic indicator if inactive</string>
      <string name="network_traffic_autohide_summary">Hide when network traffic indicator is below 1
           KB/s</string>
+
+    <!-- Statusbar colored icons -->
+    <string name="statusbar_colored_icons_title">Colored icons</string>
+    <string name="statusbar_colored_icons_summary">Use proper app icons for notification icons in statusbar</string>
 </resources>
