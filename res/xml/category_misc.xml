@@ -48,6 +48,13 @@
                android:summary="@string/global_actions_advanced_reboot_summary"
                android:defaultValue="true" />
 
+          <com.android.settings.custom.preference.SystemSettingSwitchPreference
+               android:key="volume_rocker_wake"
+               android:title="@string/volume_rocker_wake_title"
+               android:summary="@string/volume_rocker_wake_summary"
+               android:defaultValue="false"
+               android:disableDependentsState="true" />
+
     </PreferenceCategory>
     
     <PreferenceCategory
