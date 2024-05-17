@@ -342,6 +342,10 @@
     <string name="status_bar_notif_count_title">Notification count</string>
     <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
 
+    <!-- Volume Haptic feedback -->
+    <string name="haptic_feedback_category">Haptic Feedback Settings</string>
+    <string name="volume_panel_haptic_feedback_title">Vibrate on changing volume</string>
+    
     <!-- Screen off animation -->
     <string name="default_string">Default</string>
     <string name="screen_off_animation_title">Screen off animation</string>
