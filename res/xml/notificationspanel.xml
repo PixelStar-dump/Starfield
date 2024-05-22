@@ -9,8 +9,8 @@
         <!-- Island notification -->
         <Preference
             android:key="island_notification"
-            android:title="@string/notifications_island_notification_title"
-            android:summary="@string/notifications_island_notification_summary"
+            android:title="@string/island_notification_title"
+            android:summary="@string/island_notification_summary"
             android:fragment="com.star.field.fragments.IslandSettings" />
     </PreferenceCategory>
 
