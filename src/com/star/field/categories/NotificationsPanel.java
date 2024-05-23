@@ -19,9 +19,13 @@ package com.star.field.categories;
 import android.content.ContentResolver;
 import android.os.Bundle;
 
+import androidx.preference.ListPreference;
+import android.content.res.Resources;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
+import android.os.UserHandle;
+import android.provider.Settings;
 
 import com.android.internal.logging.nano.MetricsProto;
 
@@ -33,6 +37,7 @@ public class NotificationsPanel extends SettingsPreferenceFragment implements
 
     private static final String TAG = "NotificationsPanel";
     private static final String KEY_QS_SHOW_AUTO_BRIGHTNESS = "qs_show_auto_brightness";
+    private ListPreference mQuickPulldown;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,6 +47,14 @@ public class NotificationsPanel extends SettingsPreferenceFragment implements
 
         ContentResolver resolver = getActivity().getContentResolver();
         PreferenceScreen preferenceScreen = getPreferenceScreen();
+
+        int qpmode = Settings.System.getIntForUser(getContentResolver(),
+                Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN, 0, UserHandle.USER_CURRENT);
+        mQuickPulldown = (ListPreference) findPreference("qs_quick_pulldown");
+        mQuickPulldown.setValue(String.valueOf(qpmode));
+        mQuickPulldown.setSummary(mQuickPulldown.getEntry());
+        mQuickPulldown.setOnPreferenceChangeListener(this);
+
         Preference qsShowAutoBrightnessPreference = preferenceScreen.findPreference(KEY_QS_SHOW_AUTO_BRIGHTNESS);
 
         if (qsShowAutoBrightnessPreference != null) {
@@ -69,7 +82,18 @@ public class NotificationsPanel extends SettingsPreferenceFragment implements
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mQuickPulldown) {
+            int value = Integer.parseInt((String) objValue);
+            Settings.System.putIntForUser(resolver,
+                    Settings.System.STATUS_BAR_QUICK_QS_PULLDOWN, value,
+                    UserHandle.USER_CURRENT);
+            int index = mQuickPulldown.findIndexOfValue((String) objValue);
+            mQuickPulldown.setSummary(
+                    mQuickPulldown.getEntries()[index]);
+            return true;
+        }
         final String key = preference.getKey();
-        return true;
+        return false;
     }
 }
