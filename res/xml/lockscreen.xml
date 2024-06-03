@@ -54,6 +54,12 @@
         android:title="@string/pulse">
 
         <Preference
+            android:key="edge_light_settings"
+            android:title="@string/edge_light_title"
+            android:summary="@string/edge_light_summary"
+            android:fragment="com.star.field.fragments.EdgeLightSettings" />
+
+        <Preference
             android:key="pulse_settings"
             android:fragment="com.star.field.fragments.PulseSettings"
             android:title="@string/pulse_settings"
