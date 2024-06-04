@@ -397,6 +397,7 @@
     <string name="pulse_vertical_mirror_summary">Create other pulse and flip vertically</string>
 
     <!--Edge Light-->
+    <string name="enable">Enable</string>
     <string name="accent_color">Accent color (Default)</string>
     <string name="notification_color">Notification color</string>
     <string name="wallpaper_color">Wallpaper color</string>
