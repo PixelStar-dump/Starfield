@@ -57,8 +57,7 @@
             android:key="edge_light_settings"
             android:title="@string/edge_light_title"
             android:summary="@string/edge_light_summary"
-            android:fragment="com.star.field.fragments.EdgeLightSettings"
-            android:dependency="doze_enabled" />
+            android:fragment="com.star.field.fragments.EdgeLightSettings"/>
 
         <com.pixelstar.support.preferences.SecureSettingSwitchPreference
                android:key="pulse_on_new_tracks"
