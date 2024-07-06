@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="332dp"
-    android:layout_marginStart="20dp"
-    android:layout_marginTop="24dp"
-    android:layout_marginEnd="20dp"
-    android:orientation="horizontal">
-
+<LinearLayout
+    android:gravity="center_vertical"
+    android:background="@android:color/transparent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    xmlns:androidprv="http://schemas.android.com/apk/prv/res/android">
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_vertical"
-        android:layout_marginEnd="20dp"
-        android:id="@+id/wallpaper"
-        android:layout_weight="1">
-
+        android:gravity="center_vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="330.0dip"
+        android:layout_marginHorizontal="16.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginBottom="14.0dip">
         <com.google.android.material.card.MaterialCardView
             android:background="@android:color/transparent"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"
-            app:cardCornerRadius="20dp"
-            app:strokeColor="?android:attr/textColorPrimary"
-            app:rippleColor="?android:colorControlHighlight"
-            app:strokeWidth="4dp">
+            android:id="@+id/wallpaper"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:layout_marginEnd="8.0dip"
+            app:cardCornerRadius="24.0dip"
+            app:cardElevation="0.0dip"
+            app:rippleColor="?android:colorControlHighlight">
 
             <com.star.field.utils.WallpaperCardView
                 android:layout_width="match_parent"
@@ -49,103 +49,95 @@
                 android:textSize="60sp" />
 
         </com.google.android.material.card.MaterialCardView>
+        <LinearLayout
+            android:gravity="start|center"
+            android:orientation="vertical"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:layout_marginStart="8.0dip">
+            <LinearLayout
+                android:gravity="start|center"
+                android:background="@drawable/stroke_containter"
+                android:orientation="vertical"
+                android:id="@+id/iconpack"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingHorizontal="16.0dip"
+                android:paddingTop="5.0dip"
+                android:layout_marginBottom="6.0dip"
+                android:layout_weight="1.0">
+                <ImageView
+                    android:background="@drawable/declan_adaptive_shape"
+                    android:backgroundTint="?android:colorAccent"
+                    android:tint="?android:colorPrimary"
+                    android:src="@drawable/icon"
+                    android:layout_width="44.0dip"
+                    android:layout_height="44.0dip"
+                    android:padding="8.0dip"
+                    android:layout_marginBottom="21.0dip" />
+                <TextView
+                    android:textStyle="bold"
+                    android:ellipsize="marquee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Icons"
+                    android:textSize="17.0sp"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:fontFamily="@*android:string/config_headlineFontFamily" />
+                <TextView
+                    android:ellipsize="marquee"
+                    android:text="Set custom icons shape and styes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3.0dip"
+                    android:alpha="0.7"
+                    android:maxLines="4"
+                    android:textSize="14.0sp"
+                    android:textColor="?android:attr/textColorSecondary" />
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="start|center"
+                android:background="@drawable/stroke_containter"
+                android:id="@+id/fonts"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingHorizontal="16.0dip"
+                android:paddingTop="5.0dip"
+                android:layout_marginTop="6.0dip"
+                android:layout_weight="1.0">
+                <ImageView
+                    android:background="@drawable/declan_adaptive_shape"
+                    android:backgroundTint="?android:colorAccent"
+                    android:tint="?android:colorPrimary"
+                    android:src="@drawable/font"
+                    android:layout_width="44.0dip"
+                    android:layout_height="44.0dip"
+                    android:padding="8.0dip"
+                    android:layout_marginBottom="21.0dip" />
+                <TextView
+                    android:textStyle="bold"
+                    android:ellipsize="marquee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="17.0sp"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:fontFamily="@*android:string/config_headlineFontFamily"
+                    android:text="Fonts" />
+                <TextView
+                    android:ellipsize="marquee"
+                    android:text="Set system font style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3.0dip"
+                    android:alpha="0.7"
+                    android:maxLines="4"
+                    android:textSize="14.0sp"
+                    android:textColor="?android:attr/textColorSecondary" />
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:id="@+id/iconpack"
-        android:orientation="vertical">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_gravity="center_vertical"
-            android:background="@drawable/stroke_containter">
-
-            <ImageView
-                android:id="@+id/icon_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="55dp"
-                android:layout_marginLeft="30dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/ic_icon" />
-
-            <TextView
-                android:id="@+id/icon_title"
-                android:textStyle="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginTop="75dp"
-                android:layout_marginLeft="10dp"
-                android:text="Icons"
-                android:textColor="?android:attr/textColorPrimary"
-                android:textSize="17sp" />
-
-            <TextView
-                android:ellipsize="marquee"
-                android:text="Set custom icons shape and styes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="100dp"
-                android:layout_marginLeft="10dp"
-                android:alpha="0.7"
-                android:maxLines="4"
-                android:textSize="14.0sp"
-                android:textColor="?android:attr/textColorSecondary" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/fonts"
-            android:layout_gravity="center_vertical"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/stroke_containter">
-
-            <ImageView
-                android:id="@+id/font_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="55dp"
-                android:layout_marginLeft="30dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/ic_fonts" />
-
-            <TextView
-                android:id="@+id/fonts_title2"
-                android:textStyle="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentBottom="false"
-                android:layout_marginTop="80dp"
-                android:layout_marginLeft="10dp"
-                android:text="Fonts"
-                android:textColor="?android:attr/textColorPrimary"
-                android:textSize="17sp" />
-
-            <TextView
-                android:ellipsize="marquee"
-                android:text="Set system font style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="105dp"
-                android:layout_marginLeft="10dp"
-                android:alpha="0.7"
-                android:maxLines="4"
-                android:textSize="14.0sp"
-                android:textColor="?android:attr/textColorSecondary" />
-
-        </RelativeLayout>
-
-
-    </LinearLayout>
-
 </LinearLayout>

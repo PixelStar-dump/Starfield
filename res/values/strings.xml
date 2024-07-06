@@ -50,6 +50,8 @@
     <!-- Category: Notifications-->
     <string name="category_icon_title">IconPack</string>
 
+     <string name="category_fonts_title">Fonts</string>
+
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the adaptive icon shape (e.g. launcher and quick settings icons). -->
     <string name="theme_customization_icon_shape_title">Icon shape</string>
     <string name="theme_customization_icon_shape_summary">Set system icon shape style</string>
@@ -59,5 +61,5 @@
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize headline and body fonts. -->
     <string name="theme_customization_font_title">Font style</string>
     <string name="theme_customization_font_summary">Set system font style</string>
-    
+
 </resources>
