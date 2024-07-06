@@ -20,7 +20,7 @@
     <com.android.settingslib.widget.LayoutPreference
         android:clickable="true"
         android:layout="@layout/starfield_header"
-        android:key="hzn_header" />
+        android:key="starfield_header" />
 
     <PreferenceCategory
         android:title="Settings Features"
