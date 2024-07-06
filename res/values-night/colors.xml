@@ -17,4 +17,5 @@
      <color name="cardview_color">@android:color/system_neutral2_700</color>
    <!-- DashBoard star Colors -->
     <color name="dashboard_bg_star">@android:color/system_accent1_100</color>
+    
 </resources> 

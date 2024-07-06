@@ -22,7 +22,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
             app:cardCornerRadius="20dp"
-            app:strokeColor="@color/text_color_primary"
+            app:strokeColor="?android:attr/textColorPrimary"
             app:rippleColor="?android:colorControlHighlight"
             app:strokeWidth="4dp">
 

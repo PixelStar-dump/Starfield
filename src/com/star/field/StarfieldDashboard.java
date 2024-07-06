@@ -73,7 +73,7 @@ public class StarfieldDashboard extends SettingsPreferenceFragment {
                 public List<SearchIndexableResource> getXmlResourcesToIndex(
                         Context context, boolean enabled) {
                     final SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.horizon_dashboard;
+                    sir.xmlResId = R.xml.starfield_dashboard;
                     return Arrays.asList(sir);
                 }
 

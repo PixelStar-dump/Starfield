@@ -44,7 +44,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @SearchIndexable
-public class Notif extends SettingsPreferenceFragment 
+public class IconPack extends SettingsPreferenceFragment 
             implements Preference.OnPreferenceChangeListener {
 
     @Override

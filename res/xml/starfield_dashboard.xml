@@ -53,5 +53,4 @@
             android:summary="Customize your lockscreen"
             android:fragment="com.star.field.category.Lock"
             settings:layout="@layout/card_right_bot" />
-    </PreferenceCategory>
 </PreferenceScreen>

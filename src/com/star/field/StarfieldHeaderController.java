@@ -32,8 +32,8 @@ import com.android.settings.R;
 public class StarfieldHeaderController extends BasePreferenceController implements View.OnClickListener {
 	
 	private LayoutPreference mPreference;
-	private MaterialCardView aboutCard;
-	private LinearLayout quickSettingsCard, statusBarCard;
+	private MaterialCardView lsclock;
+	private LinearLayout icons, fonts;
 	
 	public StarfieldHeaderController(Context context, String key) {
 		super(context, key);
@@ -47,7 +47,7 @@ public class StarfieldHeaderController extends BasePreferenceController implemen
 	@Override
 	public void displayPreference(PreferenceScreen screen) {
 		super.displayPreference(screen);
-		mPreference = screen.findPreference("star_header");
+		mPreference = screen.findPreference("starfield_header");
 		lsclock = mPreference.findViewById(R.id.wallpaper);
 		icons = mPreference.findViewById(R.id.iconpack);
 		fonts = mPreference.findViewById(R.id.fonts);

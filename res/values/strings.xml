@@ -27,6 +27,7 @@
     <!-- Starfield -->
     <string name="starfield_dashboard_title">StarField</string>
     <string name="build_tweaks_summary_title">Shine Like A Star</string>
+    <string name="starfield_title">StarField</string>
 
     <!-- Category: Statusbar -->
     <string name="category_statusbar_title">Statusbar</string>
@@ -55,4 +56,8 @@
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the system wide icon pack. -->
     <string name="theme_customization_icon_pack_title">Icon pack</string>
     <string name="theme_customization_icon_pack_summary">Set custom icon pack style</string>
+    <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize headline and body fonts. -->
+    <string name="theme_customization_font_title">Font style</string>
+    <string name="theme_customization_font_summary">Set system font style</string>
+    
 </resources>
