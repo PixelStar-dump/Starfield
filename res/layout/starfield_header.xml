@@ -26,7 +26,7 @@
             app:rippleColor="?android:colorControlHighlight"
             app:strokeWidth="4dp">
 
-            <com.star.field.Utils.WallpaperView
+            <com.star.field.utils.WallpaperCardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:contentDescription="@null"
