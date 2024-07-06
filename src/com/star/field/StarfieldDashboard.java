@@ -13,22 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.horizon.lab.category;
+package com.star.field;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.UserHandle;
 import android.provider.SearchIndexableResource;
-import android.provider.Settings;
+import android.view.*;
 
-import androidx.preference.ListPreference;
-import androidx.preference.SwitchPreference;
-import androidx.preference.Preference;
-import androidx.preference.PreferenceCategory;
-import androidx.preference.PreferenceScreen;
-import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.*;
+import androidx.recyclerview.widget.*;
 
 import com.android.settings.R;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -41,29 +34,46 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@SearchIndexable
-public class Statusbar extends SettingsPreferenceFragment {
-
-    @Override
-    public void onCreate(Bundle icicle) {
+public class StarfieldDashboard extends SettingsPreferenceFragment {
+	
+	@Override
+	public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.category_statusbar);
-        PreferenceScreen prefSet = getPreferenceScreen();
-
+        addPreferencesFromResource(R.xml.starfield_dashboard);
     }
-
-    @Override
-    public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.HORIZON;
+	
+	@Override
+	public int getMetricsCategory() {
+        return MetricsProto.MetricsEvent.STARFIELD;
     }
-
-    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+	
+	@Override
+	public RecyclerView onCreateRecyclerView(LayoutInflater inflater, ViewGroup container, Bundle icicle) {
+		RecyclerView rcv = super.onCreateRecyclerView(inflater, container, icicle);
+		GridLayoutManager layoutG = new GridLayoutManager(getActivity(), 2);
+		layoutG.setSpanSizeLookup(new SpanSizeLookupG());
+		rcv.setLayoutManager(layoutG);
+		return rcv;
+	}
+	
+	class SpanSizeLookupG extends GridLayoutManager.SpanSizeLookup {
+		@Override
+		public int getSpanSize(int position) {
+		    if (position == 0 || position == 1) {
+				return 2;
+			} else {
+				return 1;
+			}
+		}
+	}
+	
+	public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
             new BaseSearchIndexProvider() {
                 @Override
                 public List<SearchIndexableResource> getXmlResourcesToIndex(
                         Context context, boolean enabled) {
                     final SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.category_statusbar;
+                    sir.xmlResId = R.xml.horizon_dashboard;
                     return Arrays.asList(sir);
                 }
 
@@ -73,4 +83,5 @@ public class Statusbar extends SettingsPreferenceFragment {
                     return keys;
                 }
             };
+	
 }

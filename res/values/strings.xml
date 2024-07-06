@@ -24,9 +24,9 @@
     <string name="attention">Attention</string>
     <string name="reset">Reset</string>
 
-    <!-- HorizonLab -->
-    <string name="horizon_dashboard_title">HorizonLabs</string>
-    <string name="build_tweaks_summary_title">Be the Horizoners!</string>
+    <!-- Starfield -->
+    <string name="starfield_dashboard_title">StarField</string>
+    <string name="build_tweaks_summary_title">Shine Like A Star</string>
 
     <!-- Category: Statusbar -->
     <string name="category_statusbar_title">Statusbar</string>
@@ -46,4 +46,6 @@
     <!-- Category: Notifications-->
     <string name="category_notif_title">Notifications</string>
 
+    <!-- Category: Notifications-->
+    <string name="category_icon_title">IconPack</string>
 </resources> 

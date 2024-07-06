@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024 HorizonDroid
+ * Copyright (C) 2024 StarfieldDroid
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.horizon.lab;
+package com.star.field;
 
 import android.content.*;
 import android.view.View;
@@ -29,13 +29,13 @@ import com.google.android.material.card.MaterialCardView;
 
 import com.android.settings.R;
 
-public class HorizonHeaderController extends BasePreferenceController implements View.OnClickListener {
+public class StarfieldHeaderController extends BasePreferenceController implements View.OnClickListener {
 	
 	private LayoutPreference mPreference;
 	private MaterialCardView aboutCard;
 	private LinearLayout quickSettingsCard, statusBarCard;
 	
-	public HorizonHeaderController(Context context, String key) {
+	public StarfieldHeaderController(Context context, String key) {
 		super(context, key);
 	}
 	
@@ -47,27 +47,38 @@ public class HorizonHeaderController extends BasePreferenceController implements
 	@Override
 	public void displayPreference(PreferenceScreen screen) {
 		super.displayPreference(screen);
-		mPreference = screen.findPreference("hzn_header");
-		aboutCard = mPreference.findViewById(R.id.hzn_about_card);
-		quickSettingsCard = mPreference.findViewById(R.id.hzn_qspanel_card);
-		statusBarCard = mPreference.findViewById(R.id.hzn_statusbar_card);
+		mPreference = screen.findPreference("star_header");
+		lsclock = mPreference.findViewById(R.id.wallpaper);
+		icons = mPreference.findViewById(R.id.iconpack);
+		fonts = mPreference.findViewById(R.id.fonts);
 		
-		aboutCard.setOnClickListener(this);
-		quickSettingsCard.setOnClickListener(this);
-		statusBarCard.setOnClickListener(this);
+		lsclock.setOnClickListener(this);
+		icons.setOnClickListener(this);
+		fonts.setOnClickListener(this);
 	}
 	
 	@Override
 	public void onClick(View v) {
-		if (v == aboutCard) {
-			startActivity("AboutTeamActivity");
-		} else if (v == quickSettingsCard) {
-			startActivity("QuickSettingsActivity");
-		} else if (v == statusBarCard) {
-			startActivity("StatusBarActivity");
+		if (v == lsclock) {
+			openGoogleWallpaperApp();
+		} else if (v == icons) {
+			startActivity("IconPack");
+		} else if (v == fonts) {
+			startActivity("FontsPicker");
 		}
 	}
 	
+	private void openGoogleWallpaperApp() {
+		Intent intent = new Intent(Intent.ACTION_MAIN);
+		intent.setPackage("com.google.android.apps.wallpaper");
+		if (intent.resolveActivity(mContext.getPackageManager()) != null) {
+			mContext.startActivity(intent);
+		} else {
+			// Handle the case where the Google Wallpaper app is not installed
+			Toast.makeText(mContext, "Google Wallpaper app is not installed", Toast.LENGTH_SHORT).show();
+		}
+	}
+
 	private void startActivity(String activity) {
 		Intent intent = new Intent(Intent.ACTION_MAIN);
 		intent.setComponent(new ComponentName("com.android.settings", "com.android.settings.Settings$" + activity));
