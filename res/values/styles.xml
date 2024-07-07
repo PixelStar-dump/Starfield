@@ -36,4 +36,28 @@
         <item name="android:fontFamily">@*android:string/config_headlineFontFamilyMedium</item>
         <item name="android:elevation">0dp</item>
     </style>
+
+    <style name="cardDashboardPreferenceSingleAccent">
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:background">@drawable/card_preference_background_single_accent</item>
+        <item name="android:layout_marginBottom">0dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+    </style>
+
+    <!-- Text Styles -->
+    <style name="cardTextPrimary">
+        <item name="android:textSize">19sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamily</item>
+    </style>
+
+    <style name="cardTextPrimaryMedium" parent="cardTextPrimary">
+        <item name="android:fontFamily">@*android:string/config_headlineFontFamilyMedium</item>
+    </style>
+
+    <style name="cardTextSecondary">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
 </resources>

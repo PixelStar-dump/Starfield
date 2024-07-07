@@ -18,7 +18,6 @@
     
     <!-- Horizon Header -->
     <com.android.settingslib.widget.LayoutPreference
-        android:clickable="true"
         android:layout="@layout/starfield_header"
         android:key="starfield_header" />
 
@@ -44,18 +43,27 @@
             
         <!-- Lock Screen -->
         <Preference
-            android:icon="@drawable/ic_themes"
-            android:title="Themes"
-            android:summary="Advanced Monet Theme"
-            android:fragment="com.star.field.category.Theme"
-            settings:layout="@layout/card_left_bot" />
-            
-        <!-- Lockscreen -->
-        <Preference
             android:icon="@drawable/ic_lockscreen"
             android:title="Lockscreen and AOD"
             android:summary="Customize your lockscreen"
             android:fragment="com.star.field.category.Lock"
+            settings:layout="@layout/card_left_bot" />
+            
+        <!-- Lockscreen -->
+        <Preference
+            android:icon="@drawable/ic_themes"
+            android:title="Themes"
+            android:summary="Advanced Monet Theme"
+            android:fragment="com.star.field.category.Theme"
             settings:layout="@layout/card_right_bot" />
+    </PreferenceCategory>
+    
+    <PreferenceCategory>
+        <Preference
+            android:icon="@drawable/ic_misc"
+            android:title="Miscellaneous"
+            android:summary="Extra stuff.."
+            settings:layout="@layout/card_dashboard_preference_single"
+            android:fragment="com.star.field.category.Misc"/>
     </PreferenceCategory>
 </PreferenceScreen>
