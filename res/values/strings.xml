@@ -54,7 +54,8 @@
     <string name="ls_category">Lockscreen</string>
     <string name="spoofing_category">Spoofing</string>
     <string name="icons_category">Icons</string>
-
+    <string name="system_category">System</string>
+    
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the adaptive icon shape (e.g. launcher and quick settings icons). -->
     <string name="theme_customization_icon_shape_title">Icon shape</string>
     <string name="theme_customization_icon_shape_summary">Set system icon shape style</string>
@@ -138,4 +139,10 @@
     <!-- Idle Manager -->
     <string name="idle_manager_title">Kill background processes</string>
     <string name="idle_manager_summary">Stop all non-essential background processes when the device is idle</string>
+
+     <!-- Quick QS pulldown -->
+     <string name="qs_quick_pulldown">Quick QS pulldown</string>
+     <string name="quick_pulldown_none">Disabled</string>
+     <string name="quick_pulldown_right">Pulldown statusbar from right side</string>
+     <string name="quick_pulldown_left">Pulldown statusbar from left side</string>
 </resources>
