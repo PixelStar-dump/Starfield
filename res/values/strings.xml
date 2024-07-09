@@ -145,4 +145,9 @@
      <string name="quick_pulldown_none">Disabled</string>
      <string name="quick_pulldown_right">Pulldown statusbar from right side</string>
      <string name="quick_pulldown_left">Pulldown statusbar from left side</string>
+
+    <!-- Show clipboard overlay -->
+    <string name="show_clipboard_overlay_title">Show clipboard overlay</string>
+    <string name="show_clipboard_overlay_summary">Show an overlay in the left bottom corner of the screen when something is copied to the clipboard</string>
+
 </resources>
