@@ -397,7 +397,9 @@
     <string name="lock_screen_pocket_detection_summary">Block screen and button inputs when device is in pocket</string>
     <string name="always_on_pocket_mode_enabled_title">Always on Pocket mode</string>
     <string name="always_on_pocket_mode_summary">Always block screen and button inputs when screen is turned on</string>
-    
+    <string name="battery_friendly_pocket_mode_enabled_title">Battery friendly on Pocket mode</string>
+    <string name="battery_friendly_pocket_mode_enabled_summary">Only enables sensors on lockscreen which fixes deep sleep issues on some devices and optimizing battery backup</string>
+
     <!-- Screenshot shutter sound  -->
     <string name="screenshot_shutter_sound_title">Screenshot sound</string>
     <string name="screenshot_shutter_sound_summary">Play sound when screenshot is taken</string>
