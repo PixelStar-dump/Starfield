@@ -52,9 +52,7 @@
         <com.android.settings.custom.preference.SecureSettingSwitchPreference
             android:key="battery_friendly_pocket_mode_enabled"
             android:title="@string/battery_friendly_pocket_mode_enabled_title"
-            android:summary="@string/battery_friendly_pocket_mode_enabled_summary"
-            android:dependency="pocket_mode_enabled"
-            android:defaultValue="false" />
+            android:summary="@string/battery_friendly_pocket_mode_enabled_summary"/>
 
         <com.android.settings.custom.preference.SecureSettingSwitchPreference
             android:key="always_on_pocket_mode_enabled"
